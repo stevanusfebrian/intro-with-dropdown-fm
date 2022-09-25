@@ -28,16 +28,16 @@ Users should be able to:
 ### Screenshot
 
 desktop
-![](images/desktop.png)
+![](screenshots/desktop.png)
 
 active desktop
-![](images/desktop-active.png)
+![](screenshots/desktop-active.png)
 
 mobile
-![](images/mobile1.jpg)
+![](screenshots/mobile1.jpg)
 
 mobile menu
-![](images/mobile2.jpg)
+![](screenshots/mobile2.jpg)
 
 - Solution URL: [Github](https://github.com/stevanusfebrian/intro-with-dropdown-fm)
 - Live Site URL: [Live Website](https://intro-dropdown-fm.netlify.app)
