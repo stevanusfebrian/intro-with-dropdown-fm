@@ -12,13 +12,11 @@ html{
     font-family: 'Epilogue', sans-serif;
     font-size: 1.125rem;
     background-color: var(--white);
-    
 }
 
 body{
     padding: 0;
     margin: 0;
-
 }
 
 h1, h2, h3, p{
@@ -40,11 +38,9 @@ nav{
     /* position: relative; */
 }
 
-
 .logo{
     padding-right: 35px;
 }
-
 
 .items-container{
     width: 100%;
@@ -144,10 +140,9 @@ button{
 }
 
 /* # MAIN */
-
 main{
     width: 77vw;
-    height: 75vh;
+    height: 77vh;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -155,21 +150,23 @@ main{
 }
 
 .heroes img{
-    height: 100%;
+    height:100%;
+    /* border: 1px solid blue; */
 }
 
 .main-text{
     /* border: 1px solid red; */
     width: 55%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
 }
 
 .headline{
     font-size: 2em;
     margin-top: 90px;   
+    width: 100%;
 }
 
 .description{
@@ -183,7 +180,7 @@ main{
 
 .learnMore{
     padding: 15px 25px;
-    width: fit-content;
+    width: 137px;;
     background-color: var(--black);
     color: var(--white);
     font-weight: 700;
@@ -205,6 +202,7 @@ main{
 }
 
 
+/* MEDIA QUERIES */
 @media screen and (min-width: 1920px) {
     nav{
         padding: 50px 55px;
@@ -212,6 +210,7 @@ main{
 
     .headline{
         font-size: 2.5em;
+        margin-right: 350px;
     }
     .description{
         font-size: 1.5em;
@@ -232,7 +231,6 @@ main{
 }
 
 @media screen and (max-width:1133px) {
-
     .main-text{
         padding-right: 50px;
     }
@@ -356,7 +354,7 @@ main{
         flex-direction: column-reverse;
         width: 100%;
         height: 100%;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
         justify-content:flex-end;
         /* overflow-y: hidden; */
     }
@@ -389,5 +387,4 @@ main{
     .heroes img{
         width: 100vw;
     }
-
 }
