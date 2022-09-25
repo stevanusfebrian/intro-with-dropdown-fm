@@ -1,0 +1,393 @@
+:root{
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.125rem;
+    background-color: var(--white);
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+h1, h2, h3, p{
+    padding: 0;
+    margin: 0;
+}
+
+/* # NAVBAR */
+/* ## layouting */
+.black-overlay{
+    display: none;
+}
+
+nav{
+    /* border: 1px solid gray; */
+    display: flex;
+    padding: 30px 35px;
+    align-items: center;
+    /* position: relative; */
+}
+
+
+.logo{
+    padding-right: 35px;
+}
+
+
+.items-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item{
+    padding: 0 20px;
+}
+
+.nav-items{
+    display: flex;
+}
+
+.ham-menu, .close-menu-mobile{
+    display: none;
+}
+
+
+/* ## styling */
+nav a{
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+nav a:hover, nav a:focus{
+    color: var(--black);
+    transition: 0.2s ease-in;
+}
+
+.loginRegis .item{
+    padding: 0 40px;
+}
+
+button{
+    font-family: 'Epilogue', sans-serif;
+    cursor: pointer;
+    border-radius: 14px;
+    font-size: 0.8rem;
+    border: 1px solid var(--black);
+}
+
+.register{
+    padding: 11px 18px;
+    background-color: transparent;
+    color: var(--gray);
+}
+
+.register:focus, .register:hover{
+    color: var(--black);
+    transition: 0.2s ease-in;
+}
+
+/* ### dropdown styling and layouting*/
+.hide-feature, .hide-company{
+    transform: translateY(-350px);
+    /* top: 0; */
+    opacity: 0;
+    display: none;
+    /* transition: all 2s ease-in-out; */
+}
+
+.feature-menu, .company-menu{
+    position: absolute;
+    /* top: 0px; */
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7rem;
+    background-color: white;
+    padding: 20px 25px 15px ;
+    border-radius: 12px;
+    box-shadow: 2px 5px 40px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 18px;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.feature-arrow, .company-arrow{
+    transform: rotateX(180deg);
+    transition: all 0.5s ease-in;
+}
+
+.feature-menu{
+    left: 96px;
+}
+
+.dropdown-item img{
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+/* # MAIN */
+
+main{
+    width: 77vw;
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* border: 1px solid gray; */
+}
+
+.heroes img{
+    height: 100%;
+}
+
+.main-text{
+    /* border: 1px solid red; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.headline{
+    font-size: 2em;
+    margin-top: 90px;   
+}
+
+.description{
+    padding-right: 140px;
+    margin-top: -10px;
+    font-weight: 500;
+    color: var(--gray);
+    font-size: 0.9em;
+    line-height: 1.3rem;
+}
+
+.learnMore{
+    padding: 15px 25px;
+    width: fit-content;
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 700;
+}
+
+.learnMore:hover, .learnMore:focus{
+    background-color: transparent;
+    color: var(--black);
+    transition: 0.2s ease-in;
+}
+
+.clients{
+    /* border: 1px solid grey; */
+    /* padding-right: 80px; */
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 1920px) {
+    nav{
+        padding: 50px 55px;
+    }
+
+    .headline{
+        font-size: 2.5em;
+    }
+    .description{
+        font-size: 1.5em;
+        line-height: 1.4em;
+    }
+    .learnMore{
+        transform: scale(1.5) translateX(24px);
+    }
+    .clients:last-child{
+        padding-right: 150px;
+    }
+}
+
+@media screen and (min-width:1500px) {
+    .description{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width:1133px) {
+
+    .main-text{
+        padding-right: 50px;
+    }
+    .headline{
+        font-size: 1.3em;
+    }
+    .description{
+        font-size: 0.8em;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 875px){
+    /* navbar */
+    .black-overlay{
+        display: block;
+        transition: all 0.2s ease-in;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    nav{
+        width: 100vw;
+        padding: 25px 20px;
+        justify-content: space-between;
+    }
+
+    .nav-items{
+        flex-direction: column;
+    }
+
+    .close-menu-mobile{
+        display: block;
+        text-align: end;
+    }
+
+    .ham-menu{
+        margin: 0;
+        padding-bottom: 6px;
+    }
+
+    .ham-menu{
+        display: block;
+    }
+
+    .items-container{
+        background-color: white;
+        display: block;
+        position: absolute;
+        width: 60%;
+        padding: 20px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        transform: translateX(100%);
+        transition: all 0.2s ease-in;
+    }
+    
+    .items-container.slide{
+        overflow-x: hidden;
+        transform: translateX(0);
+    }
+
+    .feature-menu, .company-menu{
+        position: absolute;
+        box-shadow: none;
+        margin-top: 0;
+        padding: 0 22px;
+        transition: all 0.2s ease-in;
+    }
+
+    .feature-menu{
+        left: -10px;
+    }
+
+    .menu-position{
+        position: relative;
+    }
+
+    .item{
+        padding: 0;
+    }
+
+    .item, .loginRegis{
+        line-height: 2.5rem;
+    }
+
+    .item img{
+        margin-left: 10px;
+    }
+
+    .loginRegis .item{
+        padding: 0;
+    }
+
+    .loginRegis{
+        text-align: center;
+    }
+
+    .register{
+        width: 100%;
+        display: block;
+    }
+
+    /* main section */
+
+    body{
+        overflow-x: hidden;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        border: 1px solid blue;
+        justify-content:flex-end;
+        /* overflow-y: hidden; */
+    }
+
+    .main-text{
+        padding: 20px;
+        width: 100%;
+    }
+
+    .headline{
+        margin: 35px 0 30px 0;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .description{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .learnMore{
+        margin-bottom: 30px;
+        margin: 0 auto;
+    }
+
+    .clients{
+        flex-wrap: wrap;
+    }
+
+    .heroes img{
+        width: 100vw;
+    }
+
+}

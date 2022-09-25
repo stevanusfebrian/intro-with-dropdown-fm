@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="black-overlay"></div>
+      <picture>
+        <img src="images/logo.svg" alt="web logo" class="logo" />
+      </picture>
+      <div class="items-container">
+        <div class="close-menu-mobile">
+          <picture>
+            <img src="images/icon-close-menu.svg" alt="">
+          </picture>
+        </div>
+        <div class="nav-items">
+          <div class="item">
+            <a href="#" id="feature-button">Features <img class="arrow1" src="images/icon-arrow-down.svg" alt="arrow down" /></a>
+
+            <div class="feature-menu hide-feature">
+              <a href="#" class="dropdown-item"> <img src="images/icon-todo.svg" alt="" /> <span>Todo List</span></a>
+              <a href="#" class="dropdown-item"> <img src="images/icon-calendar.svg" alt="" /> <span>Calendar</span></a>
+              <a href="#" class="dropdown-item"> <img src="images/icon-reminders.svg" alt="" /> <span>Reminders</span></a>
+              <a href="#" class="dropdown-item"> <img src="images/icon-planning.svg" alt="" /> <span>Planning</span></a>
+            </div>
+          </div>
+
+          <div class="item">
+            <a href="#" id="company-button">Company <img class="arrow2" src="images/icon-arrow-down.svg" alt="arrow down" /></a>
+
+            <div class="company-menu hide-company">
+              <a href="#" class="dropdown-item">History</a>
+              <a href="#" class="dropdown-item">Our Team</a>
+              <a href="#" class="dropdown-item">Blog</a>
+            </div>
+          </div>
+
+          <a href="#" class="item">Careers</a>
+          <a href="#" class="item">About</a>
+        </div>
+
+        <div class="loginRegis">
+          <a href="#" class="item">Login</a>
+          <button class="register">Register</button>
+        </div>
+      </div>
+      <div class="ham-menu">
+        <picture><img src="images/icon-menu.svg" alt="" /></picture>
+      </div>
+    </nav>
+
+    <main>
+      <div class="main-text">
+        <div class="headline">
+          <h1>
+            Make
+            remote work
+          </h1>
+        </div>
+
+        <div class="description">
+          <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+        </div>
+
+        <button class="learnMore">Learn more</button>
+
+        <div class="clients">
+          <img src="images/client-databiz.svg" alt="DataBiz" />
+          <img src="images/client-audiophile.svg" alt="audiophile" />
+          <img src="images/client-meet.svg" alt="meet" />
+          <img src="images/client-maker.svg" alt="maker" />
+        </div>
+      </div>
+
+      <picture class="heroes">
+        <source media="(max-width: 875px)" srcset="images/image-hero-mobile.png" />
+        <img src="images/image-hero-desktop.png" alt="" />
+      </picture>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
