@@ -8,6 +8,8 @@ const companyMenu = document.querySelector(".company-menu");
 const hideCompany = document.querySelector(".hide-company");
 const rotCompany = document.querySelector(".arrow2");
 
+const body = document.querySelector("body");
+
 if(window.screen.width > 875){
     // if desktop size
     featureBtn.addEventListener("click", function(){
@@ -44,10 +46,12 @@ menu.addEventListener("click", function(){
     navItems.classList.add("slide");
     overlay.style.opacity = "1";
     overlay.style.zIndex = "2";
+    body.style.overflowY = "hidden";
 });
 
 closeMenu.addEventListener("click", function(){
     navItems.classList.remove("slide");
     overlay.style.opacity = "0";
     overlay.style.zIndex = "-1";
+    body.style.overflowY = "scroll";
 });
